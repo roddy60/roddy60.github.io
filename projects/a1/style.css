@@ -1,0 +1,23 @@
+h1,
+h2
+{
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  text-transform: uppercase;
+}
+
+#giggs-running
+{
+  max-width: 500px;
+}
+
+#achievements
+{
+  display: inline-block;
+  text-align: left;
+}
+
+#more-info
+{
+  text-transform: uppercase;
+}
