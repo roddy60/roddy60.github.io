@@ -1,0 +1,42 @@
+$mugshot_max_width: 250px;
+
+#me
+{
+  background-color: GreenYellow;
+  padding-left: 0.75rem;
+  padding-bottom: 1.5rem;
+}
+
+#me::after
+{
+  display: block;
+  clear: both;
+  content: "";
+}
+
+#mugshot
+{
+  float: right;
+  max-width: $mugshot_max_width;
+  padding: 1.5rem 1.5rem 0;
+}
+
+@media (max-width: $mugshot_max_width + 400px)
+// There is nothing special about this addend -- any value in
+// its vicinity would do.
+{
+  #mugshot
+  {
+    float: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+#me h2
+{
+  text-align: center;
+  margin-top: 0;
+  padding-top: 0.667em;
+}

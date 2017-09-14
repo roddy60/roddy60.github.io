@@ -1,0 +1,48 @@
+$navbar_color: chartreuse;
+
+body
+{
+  padding-top: $navbar_height;
+}
+
+.navbar
+{
+  position: fixed;
+  top: 0;
+  left: 0;
+  box-sizing: border-box;
+  width: 100%;
+
+  font-size: $navbar_font_size;
+  line-height: $navbar_height;
+
+  text-align: right;
+  word-spacing: 3 * $navbar_font_size;
+  padding-right: $navbar_padding_right;
+
+  background-color: $navbar_color;
+}
+
+@media (min-width: $desired_width)
+{
+  .navbar
+  {
+    width: $desired_width;
+    $tmp: $desired_width / 2;
+    left: calc(50% - #{$tmp});
+    right: calc(50% - #{$tmp});
+    /*
+      The value of the 'right' property is such that, if there is a
+      scrollbar, we have a slight imperfection when the screen size is close
+      to the above min-width.  However, the error is probably not
+      discernible, because the padding at the right-hand side of the
+      navbar is wide enough that all of the text in the navbar is still
+      easily visible.
+    */
+  }
+}
+
+.navbar button
+{
+  background-color: yellow;
+}

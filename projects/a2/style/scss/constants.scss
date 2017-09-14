@@ -1,0 +1,6 @@
+$desired_width: 1024px;
+
+$navbar_font_size: 1rem;
+$navbar_item_vert_padding: $navbar_font_size / 2;
+$navbar_height: 2 * ($navbar_font_size + 2 * $navbar_item_vert_padding);
+$navbar_padding_right: $navbar_font_size;
