@@ -1,0 +1,77 @@
+@charset "UTF-8";
+body {
+  padding: 0.667rem; }
+
+.quote-app {
+  background-color: papayawhip;
+  display: table;
+  margin: 0 auto; }
+  .quote-app .when-available {
+    display: block; }
+  .quote-app .when-unavailable {
+    display: none; }
+  .quote-app.quote-app-unavailable .when-available {
+    display: none; }
+  .quote-app.quote-app-unavailable .when-unavailable {
+    display: block; }
+
+.fetch-status {
+  display: table-cell;
+  vertical-align: middle;
+  color: lightgrey;
+  padding: 0.667rem;
+  font-size: 3rem; }
+  .fetch-status::before {
+    display: block;
+    font-family: FontAwesome;
+    content: ""; }
+  .fetch-status::after {
+    display: block;
+    font-family: FontAwesome;
+    content: ""; }
+  .fetch-status-fetching::before {
+    color: blueviolet; }
+  .fetch-status-success::after {
+    color: lime; }
+  .fetch-status-failure::after {
+    color: red; }
+
+.tweet-quote {
+  display: table-cell;
+  vertical-align: middle;
+  text-decoration: none;
+  background-color: #ccf2ff;
+  padding: 0.667rem; }
+  .tweet-quote[href=""] {
+    display: none; }
+  .tweet-quote::before {
+    font-family: FontAwesome;
+    content: "";
+    font-size: 3rem;
+    color: deepskyblue; }
+
+.quote {
+  display: table-cell;
+  vertical-align: middle;
+  padding: 0.667rem;
+  font-family: monospace;
+  white-space: pre; }
+
+.when-available > div {
+  display: table-row; }
+.when-available > div > div {
+  display: table-cell; }
+.when-available > div > div:last-child {
+  text-align: center; }
+
+.quote-sources {
+  display: table;
+  margin: 0 auto; }
+  .quote-sources > div {
+    display: table-row; }
+  .quote-sources input, .quote-sources label {
+    display: table-cell; }
+  .quote-sources label {
+    text-align: left; }
+
+/*# sourceMappingURL=style.css.map */

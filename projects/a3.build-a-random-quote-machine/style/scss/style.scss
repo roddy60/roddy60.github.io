@@ -1,0 +1,155 @@
+@import 'constants';
+
+@import 'elements';
+
+.quote-app
+{
+  background-color: papayawhip;
+  display: table;
+  margin: 0 auto;
+
+  & .when-available
+  {
+    display: block;
+  }
+
+  & .when-unavailable
+  {
+    display: none;
+  }
+
+  &.quote-app-unavailable .when-available
+  {
+    display: none;
+  }
+
+  &.quote-app-unavailable .when-unavailable
+  {
+    display: block;
+  }
+}
+
+$icon_font: FontAwesome;
+$icon_font_size: 3rem;
+
+$Twitter_bird_icon: "\f099";
+$spinner_icon: "\f110";
+$flag_icon: "\f024";
+
+$Twitter_colour: deepskyblue;
+
+@mixin cell {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.fetch-status
+{
+  @include cell;
+
+  color: lightgrey;
+  padding: $padding;
+  font-size: $icon_font_size;
+
+  &::before
+  {
+    display: block;
+    font-family: $icon_font;
+    content: $spinner_icon;
+  }
+
+  &::after
+  {
+    display: block;
+    font-family: $icon_font;
+    content: $flag_icon;
+  }
+
+  &-fetching::before
+  {
+    color: blueviolet;
+  }
+
+  &-success::after
+  {
+    color: lime;
+  }
+
+  &-failure::after
+  {
+    color: red;
+  }
+}
+
+.tweet-quote
+{
+  &[href=""]
+  {
+    display: none;
+  }
+
+  @include cell;
+
+  text-decoration: none;
+  background-color: lighten($Twitter_colour, 40%);
+  padding: $padding;
+
+  &::before
+  {
+    font-family: $icon_font;
+    content: $Twitter_bird_icon;
+    font-size: 3rem;
+    color: $Twitter_colour;
+  }
+}
+
+.quote
+{
+  @include cell;
+
+  padding: $padding;
+  font-family: monospace;
+  white-space: pre;
+}
+
+.when-available
+{
+  & > div
+  {
+    display: table-row;
+  }
+
+  & > div > div
+  {
+    display: table-cell;
+  }
+
+  & > div > div:last-child
+  {
+    text-align: center;
+  }
+}
+
+.quote-sources
+{
+  display: table;
+  margin: 0 auto;
+
+  & > div
+  {
+    display: table-row;
+  }
+
+  & input,
+  & label
+  {
+    display: table-cell;
+  }
+
+  & label
+  {
+    text-align: left;
+  }
+}
+
+@import 'debug';

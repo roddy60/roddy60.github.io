@@ -1,0 +1,97 @@
+<?xml version="1.0"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" [
+  <!ENTITY forismatic_proxy_url
+    "&#x68;&#x74;&#x74;&#x70;&#x73;&#x3A;&#x2F;&#x2F;&#x6B;&#x69;&#x6E;&#x67;&#x66;&#x69;&#x73;&#x68;&#x65;&#x72;&#x2E;&#x6E;&#x66;&#x73;&#x68;&#x6F;&#x73;&#x74;&#x2E;&#x63;&#x6F;&#x6D;&#x2F;&#x66;&#x72;&#x65;&#x65;&#x2D;&#x63;&#x6F;&#x64;&#x65;&#x2D;&#x63;&#x61;&#x6D;&#x70;&#x2F;&#x70;&#x72;&#x6F;&#x78;&#x79;&#x2D;&#x71;&#x75;&#x6F;&#x74;&#x65;&#x2D;&#x61;&#x70;&#x69;&#x2F;"
+  >
+]>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta
+      http-equiv="Content-Security-Policy"
+      content="
+        default-src 'none';
+        style-src 'self';
+        script-src
+          'self'
+          &forismatic_proxy_url;
+          'sha384-c9xI8gvwBw+KJMbf5Q6wr/TyFIdTVXvG5IiLyXtgU0UPqaGfJMBBf8TDcVIcp2NV'
+        ;
+        connect-src 'self'
+      "
+    />
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Random Quote Machine</title>
+
+    <link rel="stylesheet" href="../../vendor/normalize-7.0.0.css"/>
+    <link rel="stylesheet" href="style/css/style.css"/>
+    <script type="text/javascript">FORISMATIC_PROXY_URL = '&forismatic_proxy_url;';</script>
+  </head>
+
+  <body>
+    <div class="quote-app">
+      <div class="when-available">
+        <div>
+          <div>
+            <span class="fetch-status"/>
+            <a class="tweet-quote" href=""/>
+            <div class="quote"/>
+          </div>
+        </div>
+
+        <div>
+          <div>
+            <button id="get-quote-button">Get new quote</button>
+
+            <h3>Sources</h3>
+
+            <div class="quote-sources">
+              <div>
+                <input
+                  id="quote_source.forismatic"
+                  name="quote_source"
+                  type="radio"
+                  value="forismatic.com"
+                />
+
+                <label for="quote_source.forismatic">forismatic.com</label>
+              </div>
+
+              <div>
+                <input
+                  id="quote_source.definitions"
+                  name="quote_source"
+                  type="radio"
+                  value="definitions"
+                  checked="checked"
+                />
+
+                <label for="quote_source.definitions">
+                  Humourous word definitions<br/>
+                  As used by the Unix 'fortune' program
+                </label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="when-unavailable">
+        <h2>Unavailable</h2>
+
+        <p>
+          It appears that your browser's support for
+          Content Security Policy is incomplete or non-existent.
+          For your protection, this web application has been
+          disabled.
+        </p>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../vendor/jquery-3.2.1.min.js"/>
+    <script type="text/javascript" src="../../vendor/require-2.3.5.js"/>
+    <script type="text/javascript" src="js/start.js"/>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+define(
+  {
+    AJAX_TIMEOUT: 10e3,
+    FORISMATIC_PROXY_URL: window.FORISMATIC_PROXY_URL,
+  }
+);
