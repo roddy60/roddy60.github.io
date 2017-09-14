@@ -1,5 +1,5 @@
-The style is implemented in Sass.
-To compile the Sass into CSS, use the following command:
+The style is implemented in Sass.  The following command was used to compile
+the Sass into CSS:
 
 ```
 sass style/scss/style.scss style/scss/style.css
