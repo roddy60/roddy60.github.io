@@ -15,7 +15,9 @@ body {
   .quote-app.quote-app-unavailable .when-unavailable {
     display: block; }
   .quote-app .when-unavailable {
-    max-width: 6.5cm; }
+    max-width: 6.5cm;
+    padding-left: 0.667rem;
+    padding-right: 0.667rem; }
 
 .fetch-status {
   display: table-cell;
