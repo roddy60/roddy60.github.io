@@ -2,7 +2,7 @@ The style is implemented in Sass.  The following command was used to compile
 the Sass into CSS:
 
 ```
-sass style/scss/style.scss style/scss/style.css
+sass style/scss/style.scss style/css/style.css
 ```
 
 ## Things to note
