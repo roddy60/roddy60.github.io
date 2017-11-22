@@ -27,6 +27,11 @@
   {
     display: block;
   }
+
+  & .when-unavailable
+  {
+    max-width: 6.5cm;
+  }
 }
 
 $icon_font: FontAwesome;
