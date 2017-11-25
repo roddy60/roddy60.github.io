@@ -1,0 +1,44 @@
+.weather
+{
+  background-color: white;
+  color: black;
+  font-family: monospace;
+  text-align: center;
+}
+
+.weather__heading ~ *
+{
+  font-size: 150%;
+}
+
+.weather__temperature_container
+{
+  margin-top: 1.5em;
+  margin-bottom: 1.5em;
+}
+
+.weather__temperature_unit_change_button
+{
+  margin-top: 1em;
+}
+
+.weather__fetching_indicator::before
+{
+  content: 'FETCHING...';
+  font-style: italic;
+}
+
+.weather__error
+{
+  background-color: white;
+  color: red;
+  max-width: 60ex;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.weather__error_messages > div
+{
+  margin-top: 1em;
+  margin-bottom: 1em;
+}

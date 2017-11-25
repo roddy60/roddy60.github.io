@@ -1,0 +1,83 @@
+<?xml version="1.0"?>
+<!--
+  The source code for this project is here:
+
+    https://github.com/roddy60/roddy60.github.io/tree/master/projects/a4.show-the-local-weather
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Local Weather</title>
+
+    <link rel="stylesheet" href="../../vendor/normalize-7.0.0.css"/>
+    <link
+      rel="stylesheet"
+      href="../../vendor/font-awesome-4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="style/css/weather.css"/>
+
+    <!--
+      This 'style' element is to avoid a Flash of Unstyled Content.
+    -->
+    <style type="text/css">
+      <![CDATA[
+      .weather.weather--initializing > *
+      {
+        display: none;
+      }
+
+      .weather.weather--initializing > .weather__heading
+      {
+        display: block;
+      }
+      ]]>
+    </style>
+  </head>
+
+  <body>
+    <div class="weather weather--initializing">
+      <h1 class="weather__heading">
+        YOUR<br/>
+        LOCAL<br/>
+        WEATHER
+      </h1>
+
+      <div class="weather__fetching_indicator"/>
+
+      <div class="weather__error">
+        <h2>An Error Occurred</h2>
+        <div>
+          The error messages were:<br/>
+          <br/>
+          <div class="weather__error_messages"/>
+        </div>
+      </div>
+
+      <div class="weather__info">
+        <div class="weather__country_code"/>
+        <div class="weather__place"/>
+        <div class="weather__temperature_container">
+          <span class="weather__temperature"/>
+          °<span class="weather__temperature_unit"/>
+        </div>
+        <img class="weather__icon_URL" src="" alt=""/>
+        <div class="weather__short_description"/>
+        <div>
+          <button class="weather__temperature_unit_change_button">
+            CELSIUS<br/>
+            <span class="fa fa-exchange fa-rotate-90"/><br/>
+            FAHRENHEIT
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script type="text/javascript" src="../../vendor/jquery-3.2.1.min.js"/>
+    <script type="text/javascript" src="../../vendor/require-2.3.5.js"/>
+    <script type="text/javascript" src="js/start.js"/>
+  </body>
+</html>
