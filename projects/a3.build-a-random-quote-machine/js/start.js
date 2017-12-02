@@ -11,6 +11,10 @@ requirejs.config(
 require(
   ['classes/App'],
   function (App) {
-    (new App).start();
+    $(
+      function () {
+        (new App).start();
+      }
+    );
   }
 );
