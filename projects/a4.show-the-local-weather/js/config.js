@@ -25,6 +25,9 @@
   In this example, we might end up with the following query string:
 
     ?cfg=hcp=1,sw=0
+
+  The purpose of the 'show_weather' setting is to ensure that we get a good
+  look at the message that is shown when the app is in the 'fetching' state.
 */
 define(
   [],
