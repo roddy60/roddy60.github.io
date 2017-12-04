@@ -2,6 +2,8 @@
 
 This project is a solution to the freeCodeCamp exercise entitled
 [Build a Personal Portfolio Webpage](https://www.freecodecamp.org/challenges/build-a-personal-portfolio-webpage).
+(In case that page disappears or changes, an
+[https://archive.is/NzaHm](archived copy) has been made.)
 
 ## Building
 

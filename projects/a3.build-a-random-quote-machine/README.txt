@@ -5,6 +5,10 @@ Random Quote Machine", available here:
 
   https://www.freecodecamp.org/challenges/build-a-random-quote-machine
 
+If that page disappears or changes, you can find it archived here:
+
+  https://archive.is/zgDB0
+
 BUILDING
 
 The style is implemented in Sass.  The version used during development was
