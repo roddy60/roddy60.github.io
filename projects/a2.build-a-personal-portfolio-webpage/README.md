@@ -1,3 +1,10 @@
+## Introduction
+
+This project is a solution to the freeCodeCamp exercise entitled
+[Build a Personal Portfolio Webpage](https://www.freecodecamp.org/challenges/build-a-personal-portfolio-webpage).
+
+## Building
+
 The style is implemented in Sass.  The following command was used to compile
 the Sass into CSS:
 
