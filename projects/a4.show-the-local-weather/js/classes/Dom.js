@@ -36,7 +36,7 @@ define(
     };
 
     /**
-      * @param {Array<string>} error_messages
+      * @param {Array.<string>} error_messages
       */
     Class.prototype.setErrorMessages = function (error_messages) {
       var elem = this._errorMessagesElement();

@@ -49,7 +49,7 @@ define(
     };
 
     /**
-      * @param {Array<string>} error_messages
+      * @param {Array.<string>} error_messages
       */
     Class.prototype._reportError = function (error_messages) {
       this._DOM.setAppStatus('error');
