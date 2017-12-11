@@ -47,7 +47,7 @@ define(
 
       var error_messages = [];
 
-      for (var i = 2; i <= 3 && i <= arguments.length; i++) {
+      for (var i = 1; i < arguments.length && i < 3; i++) {
         if (arguments[i] != null) {
           var s = arguments[i].toString();
           if (s != '' && !s.match(/^\[object .+\]$/)) {
