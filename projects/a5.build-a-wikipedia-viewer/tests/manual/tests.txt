@@ -1,0 +1,180 @@
+Test:
+
+  title: Search works, links are valid
+
+  steps:
+
+    * Do a search on some search term that is sure to return results.
+
+    * Verify:
+    
+      * There is at least one search result.
+
+      * At least one of the links points to a valid Wikipedia page.
+
+Test:
+
+  title: Search returns nothing
+
+  steps:
+
+    * Do a search on some search term that is sure to return no results.
+    Here is one:
+
+      jgwiqnkxobxnhkqltmvphynlefcctj
+
+    * When the search is done, verify:
+    
+      * There are no search results.
+
+      * A message has appeared in the page, saying:
+
+        Your search returned no results
+
+      * The "SHOW MORE" button is not visible.
+
+      * The "Search Wikipedia" button has not been disabled.
+
+Test:
+
+  title: Response has incorrect format
+
+  steps:
+
+    * Configure the application so that 2 bogus error messages are generated
+    for the format of the first response from the server.
+
+    * Perform a search on some search term.
+
+    * Verify:
+    
+      * The 2 bogus error messages appear.
+
+      * The "Search Wikipedia" button has not been disabled.
+
+    * Clean up:
+
+      * Undo the configuration change in the first step.
+
+Test:
+
+  title:
+  
+    "SHOW MORE" fails on network error; next attempt succeeds
+
+  steps:
+
+    * Configure the program to set a low value for the default Ajax timeout.
+
+    * Enter a search term into the text field that is sure
+    to produce many search results; say "elephant".
+
+    * Click the "Search Wikipedia" button.
+
+    * Cut off the browser's access to Wikipedia.
+
+    * Click the "SHOW MORE" button.
+
+    * Verify:
+
+      * An error message is shown in the page.
+
+      * All buttons in the page remain visible and enabled.
+
+    * Restore the browser's access to Wikipedia.
+
+    * Click the "SHOW MORE" button.
+
+    * Verify:
+
+      * The error message disappears immediately after the button has been
+      pressed.
+
+      * More search results appear.
+
+    * Clean up:
+
+      * Undo the configuration change in the first step.
+
+Test:
+
+  title: New search completely replaces old search
+
+  steps:
+
+    * Enter a search term into the text field; say "elephant".
+
+    * Click the "Search Wikipedia" button.
+
+    * Click the "SHOW MORE" button.
+
+    * Enter another search term into the text field; say "Caesar".
+
+    * Click the "Search Wikipedia" button.
+
+    * Verify that the search results for "elephant" were replaced with
+    search results for "Caesar".
+
+    * Click the "SHOW MORE" button.
+
+    * Verify that the new results that appear pertain to "Caesar", not
+    "elephant".
+
+Test:
+
+  title:
+
+    Search that returns results is followed by search on different term
+    that returns no results
+
+  steps:
+
+    * Enter a search term into the text field; say "elephant".
+
+    * Click the "Search Wikipedia" button.
+
+    * Click the "SHOW MORE" button.
+
+    * Enter a search term into the text field that is sure to return no
+    results.  Here is one:
+
+      jgwiqnkxobxnhkqltmvphynlefcctj
+
+    * Click the "Search Wikipedia" button.
+
+    * Verify:
+    
+      * The search results for "elephant" were removed.
+
+      * The "SHOW MORE" button disappeared.
+
+      * The "Search Wikipedia" button has not been disabled.
+
+      * A new message has appeared in the page, saying:
+
+        Your search returned no results
+
+Test:
+
+  title: API returns no results when "SHOW MORE" is clicked
+
+  steps:
+
+    * Search on some term that is sure to return search results.
+
+    * Configure the program so that requests to the API return an empty
+    list.
+
+    * Click the "SHOW MORE" button.
+
+    * Verify:
+
+      * A message appears in the page saying "No more results".
+
+      * The "SHOW MORE" button disappears.
+
+      * The "Search Wikipedia" button is not disabled.
+
+    * Clean up:
+
+      * Undo the above configuration change.

@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!--
+  The source code for this project is here:
+
+    https://github.com/roddy60/roddy60.github.io/tree/master/projects/a5.build-a-wikipedia-viewer
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Explore Wikipedia</title>
+
+    <link rel="stylesheet" href="../../vendor/normalize-7.0.0.css"/>
+    <link rel="stylesheet" href="style/css/explore-wikipedia.css"/>
+  </head>
+
+  <body>
+    <div class="explore-wikipedia explore-wikipedia--loading">
+      <div>
+        <div class="explore-wikipedia__loading"/>
+
+        <form
+          class="explore-wikipedia__random-page-form"
+          action="https://en.wikipedia.org/wiki/Special:Random"
+          target="_blank"
+        >
+          <p>
+            <button type="submit">
+              Random<br/>
+              Wikipedia<br/>
+              Page
+            </button>
+          </p>
+        </form>
+
+        <form class="explore-wikipedia__search-form" action="">
+          <p>
+            <input
+              class="explore-wikipedia__search-input"
+              name="search_string"
+              type="text"
+              placeholder="Search terms"
+              size="20"
+            />
+
+            <button
+              type="submit"
+              class="explore-wikipedia__search-button"
+            >
+              Search Wikipedia
+            </button>
+          </p>
+        </form>
+
+        <h2
+          class="explore-wikipedia__search-term-heading"
+          style="display: none"
+        >
+          Results for “<span class="explore-wikipedia__search-term"/>”
+        </h2>
+
+        <div class="explore-wikipedia__search-results"/>
+
+        <div class="explore-wikipedia__error-messages"/>
+
+        <p
+          class="explore-wikipedia__no-results"
+          style="display: none"
+        >
+          Your search returned no results
+        </p>
+
+        <p
+          class="explore-wikipedia__no-more-results"
+          style="display: none"
+        >
+          No more results
+        </p>
+
+        <div
+          class="explore-wikipedia__fetching"
+          style="display: none"
+        />
+
+        <p
+          class="explore-wikipedia__more-button-container"
+          style="display: none"
+        >
+          <button
+            class="explore-wikipedia__more-button"
+          >SHOW MORE</button>
+        </p>
+
+        <div class="explore-wikipedia__templates">
+          <div class="explore-wikipedia__search-result">
+            <h3>
+              <a
+                class="explore-wikipedia__search-result-title"
+                href=""
+              />
+            </h3>
+            <p class="explore-wikipedia__search-result-extract"/>
+          </div>
+        </div>   <!-- end of: explore-wikipedia__templates -->
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      <![CDATA[
+      if (window.console && console.time) {
+        console.time('loading');
+      }
+      ]]>
+    </script>
+    <script type="text/javascript" src="../../vendor/require-2.3.5.js"/>
+    <script type="text/javascript" src="js/config/requirejs.js"/>
+    <script type="text/javascript" src="js/start.js"/>
+  </body>
+</html>

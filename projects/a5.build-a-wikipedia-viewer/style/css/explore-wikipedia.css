@@ -1,0 +1,71 @@
+.explore-wikipedia h1,
+.explore-wikipedia h2,
+.explore-wikipedia h3,
+.explore-wikipedia h4,
+.explore-wikipedia h5,
+.explore-wikipedia h6,
+.explore-wikipedia p
+{
+  max-width: 60ex;
+}
+
+.explore-wikipedia
+{
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.explore-wikipedia > div
+{
+  display: table-cell;
+}
+
+.explore-wikipedia.explore-wikipedia--loading
+  .explore-wikipedia__loading::before
+{
+  display: block;
+  content: 'LOADING…';
+  font-size: 2em;
+  font-style: italic;
+  padding: 1em;
+}
+.explore-wikipedia.explore-wikipedia--loading
+  .explore-wikipedia__loading ~ *
+{
+  display: none;
+}
+
+.explore-wikipedia__search-term-heading
+{
+  font-weight: bold;
+}
+
+.explore-wikipedia__search-results
+{
+  text-align: left;
+}
+
+.explore-wikipedia__error-messages
+{
+  background-color: white;
+  color: red;
+}
+
+.explore-wikipedia__no-results
+{
+  font-style: italic;
+}
+
+.explore-wikipedia__no-more-results
+{
+  font-style: italic;
+}
+
+.explore-wikipedia__fetching::before
+{
+  content: 'FETCHING…';
+  font-size: 2em;
+  font-style: italic;
+}

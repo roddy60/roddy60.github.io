@@ -1,0 +1,2 @@
+When recording test results, be sure to include details of the
+OS and browser.
