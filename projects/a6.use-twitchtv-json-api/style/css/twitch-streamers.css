@@ -1,0 +1,154 @@
+.twitch-streamers__loading-msg,
+.twitch-streamers__error-msg,
+.twitch-streamers__title,
+.twitch-streamers__last-update-time
+{
+  text-align: center;
+}
+
+.twitch-streamers__loading-msg
+{
+  font-style: italic;
+  font-size: 5em;
+}
+
+.twitch-streamers__loading-msg
+{
+  display: none;
+}
+.twitch-streamers.twitch-streamers--loading .twitch-streamers__loading-msg
+{
+  display: block;
+}
+.twitch-streamers.twitch-streamers--loading
+  .twitch-streamers__loading-msg ~ *
+{
+  display: none;
+}
+
+.twitch-streamers__error-msg
+{
+  font-size: 5em;
+  background-color: white;
+  color: red;
+}
+
+.twitch-streamers__error-msg
+{
+  display: none;
+}
+.twitch-streamers.twitch-streamers--error .twitch-streamers__error-msg
+{
+  display: block;
+}
+.twitch-streamers.twitch-streamers--error
+  .twitch-streamers__error-msg ~ *
+{
+  display: none;
+}
+
+.twitch-streamers__streamers
+{
+  display: table;
+}
+.twitch-streamers__streamer
+{
+  display: table-row;
+}
+.twitch-streamers__streamer > div
+{
+  display: table-cell;
+}
+
+.twitch-streamers__streamers
+{
+  margin-top: 1em;
+  margin-bottom: 1em;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.twitch-streamers__streamer > div
+{
+  vertical-align: middle;
+}
+
+.twitch-streamers__streamer:nth-child(n + 2) > div
+{
+  padding-top: 1em;
+}
+.twitch-streamers__streamer > div:nth-child(n + 2)
+{
+  padding-left: 1em;
+}
+
+.twitch-streamers.twitch-streamers--hide-if-has-video-title
+  .twitch-streamers__has-video-title
+{
+  display: none;
+}
+
+.twitch-streamers.twitch-streamers--hide-if-lacks-video-title
+  .twitch-streamers__lacks-video-title
+{
+  display: none;
+}
+
+.twitch-streamers__streamer-logo
+{
+  max-height: 4em;
+}
+
+.twitch-streamers__video-title
+{
+  max-width: 60ex;
+}
+
+.twitch-streamers__not-streaming
+{
+  font-style: italic;
+}
+
+.twitch-streamers__not-streaming
+{
+  display: none;
+}
+.twitch-streamers__video-title:empty ~ .twitch-streamers__not-streaming
+{
+  display: block;
+}
+
+.twitch-streamers__last-update-time:not(:empty)::before
+{
+  content: 'Last updated: ';
+  font-weight: bold;
+}
+
+.twitch-streamers__controls
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.twitch-streamers__controls
+{
+  display: table;
+}
+.twitch-streamers__controls > div
+{
+  display: table-row;
+}
+.twitch-streamers__controls > div > div
+{
+  display: table-cell;
+}
+
+.twitch-streamers__controls > div > div:first-child
+{
+  padding-right: 1em;
+}
+
+.twitch-streamers__templates
+{
+  display: none;
+}

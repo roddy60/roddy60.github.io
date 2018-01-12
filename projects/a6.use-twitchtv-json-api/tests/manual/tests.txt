@@ -1,0 +1,102 @@
+Assumptions:
+
+  At the start of each test, the app's configuration is:
+
+    {
+      update_interval: 2e3,
+      usernames: [
+        'esl_sc2',
+        'freecodecamp',
+        'test_channel',
+      ],
+    }
+
+  And the app's test configuration is:
+
+    {
+      ajax_timeout: 3e3,
+      max_updates: 3,
+    }
+
+Test:
+
+  Title: Basic
+
+  Steps:
+
+    * Access the app in a web browser.
+
+    * Verify:
+
+      * The "Last updated" time updates every 2 seconds (until updating
+      stops, due to the 'max_updates' setting).
+
+      * Each user's name is a hyperlink to a web page in the twitch.tv
+      domain.
+
+    * Uncheck the 2 checkboxes, then put them back in the checked state.
+    Verify:
+
+      * Each time you change a checkbox, the app does the right thing.
+
+      * When both checkboxes are unchecked, the app's appearance is OK.
+
+Test:
+
+  Title: User order
+
+  Steps:
+
+    * Access the app in a web browser.
+
+    * Verify:
+
+      * The users are in the same order as in the configuration.
+
+    * In the configuration, reverse the order of the 'usernames' setting.
+
+    * Access the app in a web browser.
+
+    * Verify:
+
+      * The users are in the same order as in the configuration.
+
+Test:
+
+  Title: No access to server
+
+  Steps:
+
+    * Cut off the web browser's access to the API server
+    (without cutting off its access to the app's static files).
+
+    * Access the app in a web browser.
+
+    * Verify that the browser shows a page consisting of the following:
+
+      Twitch Streamers
+
+          ERROR
+
+Test:
+
+  Title: First attempt to get streaming information fails
+
+  Steps:
+
+    * In the test configuration, set:
+
+      * streaming_info_attempt_1_fails to true.
+
+    * Access the app in a web browser.
+
+    * Verify:
+
+      * The app loads, then shows a page consisting of the following:
+
+        Twitch Streamers
+
+            ERROR
+
+      A few seconds later, the app shows a page listing the users and what
+      they are streaming, just as if there had never been a failure.

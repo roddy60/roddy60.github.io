@@ -1,0 +1,96 @@
+<?xml version="1.0"?>
+<!--
+  The source code for this project is here:
+
+    https://github.com/roddy60/roddy60.github.io/tree/master/projects/a6.use-twitchtv-json-api
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Twitch Streamers</title>
+
+    <script type="text/javascript">
+      <![CDATA[
+      if (window.console && console.time) {
+        console.time('loading');
+        console.time('loading and initial Ajax');
+      }
+      ]]>
+    </script>
+
+    <link rel="stylesheet" href="../../vendor/normalize-7.0.0.css"/>
+    <link rel="stylesheet" href="style/css/style.css"/>
+    <link rel="stylesheet" href="style/css/twitch-streamers.css"/>
+    <link rel="stylesheet" href="style/css/twitch-streamers.debug.css"/>
+  </head>
+
+  <body>
+    <div class="twitch-streamers twitch-streamers--loading">
+      <div class="twitch-streamers__loading-msg">LOADING…</div>
+
+      <h2 class="twitch-streamers__title">Twitch Streamers</h2>
+
+      <p class="twitch-streamers__error-msg">
+        ERROR
+      </p>
+
+      <div class="twitch-streamers__streamers"/>
+
+      <p class="twitch-streamers__last-update-time"/>
+
+      <div class="twitch-streamers__controls">
+        <div>
+          <div>
+            <input
+              type="checkbox"
+              class="twitch-streamers__check-if-want-if-has-title"
+              checked="checked"
+            />
+          </div>
+          <div>
+            Show users currently streaming
+          </div>
+        </div>
+        <div>
+          <div>
+            <input
+              type="checkbox"
+              class="twitch-streamers__check-if-want-if-lacks-title"
+              checked="checked"
+            />
+          </div>
+          <div>
+            Show users <em>not</em> currently streaming
+          </div>
+        </div>
+      </div>
+
+      <div class="twitch-streamers__templates">
+        <div class="twitch-streamers__streamer">
+          <div>
+            <img class="twitch-streamers__streamer-logo" src="" alt=""/>
+          </div>
+          <div>
+            <a
+              class="twitch-streamers__streamer-display-name"
+              href=""
+            />
+          </div>
+          <div>
+            <div class="twitch-streamers__video-title"/>
+            <div class="twitch-streamers__not-streaming">
+              Not streaming any video
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="../../vendor/require-2.3.5.js"/>
+    <script type="text/javascript" src="js/config/requirejs.js"/>
+    <script type="text/javascript" src="js/start.js"/>
+  </body>
+</html>
