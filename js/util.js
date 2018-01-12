@@ -2,7 +2,7 @@ define(
   [],
   function () {
     return {
-      /** @return Array<string> */
+      /** @return Array<string> - may contain duplicates */
       jquery_ajax_error_messages: function () {
         /*
           The jQuery docs are unclear about the meaning of the 2nd and 3rd
