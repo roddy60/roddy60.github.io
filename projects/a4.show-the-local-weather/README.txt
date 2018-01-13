@@ -1,8 +1,3 @@
-This project is a solution to the freeCodeCamp exercise entitled "Show the
-Local Weather", available here:
+A specification for this project is here:
 
-  https://www.freecodecamp.org/challenges/show-the-local-weather
-
-If that page disappears or changes, you can find it archived here:
-
-  https://archive.is/QAroU
+  https://roddy60.github.io/sites/1/specs/a4.show-the-local-weather/

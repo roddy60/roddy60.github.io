@@ -1,12 +1,3 @@
-This project is a solution to the freeCodeCamp exercise entitled "Build a
-Wikipedia Viewer".  The specification for the exercise is here:
+A specification for this project is here:
 
-  https://www.freecodecamp.org/challenges/build-a-wikipedia-viewer
-
-A screenshot of that page is in the following file:
-
-  spec/screenshot-2017-12-27.png
-
-An archived copy of the page is here:
-
-  https://archive.is/qv04R
+  https://roddy60.github.io/sites/1/specs/a5.build-a-wikipedia-viewer/

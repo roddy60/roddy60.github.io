@@ -1,9 +1,7 @@
 ## Introduction
 
-This project is a solution to the freeCodeCamp exercise entitled
-[Build a Personal Portfolio Webpage](https://www.freecodecamp.org/challenges/build-a-personal-portfolio-webpage).
-(In case that page disappears or changes, an
-[https://archive.is/NzaHm](archived copy) has been made.)
+A [specification](https://roddy60.github.io/sites/1/specs/a2.build-a-personal-portfolio-webpage/)
+is available for this project.
 
 ## Building
 

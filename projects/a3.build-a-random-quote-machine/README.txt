@@ -1,13 +1,8 @@
 INTRODUCTION
 
-This project is a solution to the freeCodeCamp exercise entitled "Build a
-Random Quote Machine", available here:
+A specification for this project is here:
 
-  https://www.freecodecamp.org/challenges/build-a-random-quote-machine
-
-If that page disappears or changes, you can find it archived here:
-
-  https://archive.is/zgDB0
+  https://roddy60.github.io/sites/1/specs/a3.build-a-random-quote-machine/
 
 BUILDING
 
