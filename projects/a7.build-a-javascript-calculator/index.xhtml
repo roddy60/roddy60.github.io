@@ -1,0 +1,120 @@
+<?xml version="1.0"?>
+<!--
+  The source code for this project is here:
+
+    https://github.com/roddy60/roddy60.github.io/tree/master/projects/a7.build-a-javascript-calculator
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd" [
+  <!ENTITY block_name "calculator">
+]>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Calculator</title>
+
+    <script type="text/javascript">
+      <![CDATA[
+      console.time('loading');
+      ]]>
+    </script>
+
+    <link
+      rel="stylesheet"
+      class="no-cache-bust"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@7.0.0/normalize.css"
+    />
+    <link rel="stylesheet" href="generated/style/css/calculator/style.css"/>
+    <link
+      rel="stylesheet"
+      href="style/css/calculator/ie11-fixes.css"
+    />
+    <link rel="stylesheet" href="generated/style/css/calculator/debug.css"/>
+  </head>
+
+  <body>
+    <div
+      class="
+        &block_name;
+        &block_name;--loading
+      "
+    >
+      <div class="&block_name;__loading-msg">
+        LOADING…
+      </div>
+
+      <div class="&block_name;__calculator">
+        <div class="&block_name;__display">
+          <div class="&block_name;__line1"/>
+          <div class="&block_name;__line2"/>
+        </div>
+        <div class="&block_name;__keypad">
+          <button type="button" class="&block_name;__button">AC</button>
+          <button type="button" class="&block_name;__button">CE</button>
+          <button type="button" class="&block_name;__button">÷</button>
+          <button type="button" class="&block_name;__button">×</button>
+
+          <button type="button" class="&block_name;__button">7</button>
+          <button type="button" class="&block_name;__button">8</button>
+          <button type="button" class="&block_name;__button">9</button>
+          <button
+            type="button"
+            class="
+              &block_name;__button
+              &block_name;__button--minus
+            "
+          >-</button>
+
+          <button type="button" class="&block_name;__button">4</button>
+          <button type="button" class="&block_name;__button">5</button>
+          <button type="button" class="&block_name;__button">6</button>
+          <button type="button" class="&block_name;__button">+</button>
+
+          <button type="button" class="&block_name;__button">1</button>
+          <button type="button" class="&block_name;__button">2</button>
+          <button type="button" class="&block_name;__button">3</button>
+          <button
+            type="button"
+            class="
+              &block_name;__button
+              &block_name;__button--equals
+            "
+          >=</button>
+
+          <button
+            type="button"
+            class="
+              &block_name;__button
+              &block_name;__button--zero
+            "
+          >0</button>
+          <button
+            type="button"
+            class="
+              &block_name;__button
+              &block_name;__button--period
+            "
+          >.</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="no-cache-bust">
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/js-polyfills@0.1.41/polyfill.min.js"
+      ></script>
+    </div>
+
+    <script type="text/javascript" src="js/config/requirejs.js"/>
+    <div class="no-cache-bust">
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/requirejs@2.3.5/require.js"
+      />
+    </div>
+    <script type="text/javascript" src="js/start.js"/>
+  </body>
+</html>

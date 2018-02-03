@@ -1,0 +1,186 @@
+$h_spacing: 0.7rem;
+$v_spacing: 0.7rem;
+
+$standard_button_content_width: 3.1rem;
+$standard_button_content_height: 2rem;
+$button_border_size: 2px;
+$standard_button_true_width: calc(
+  #{$button_border_size} + #{$standard_button_content_width} +
+  #{$button_border_size}
+);
+$button_font_size: 1rem;
+$keypad_content_width: calc(
+  4 * (#{$standard_button_true_width} + #{$h_spacing})
+);
+$keypad_true_width: calc(#{$h_spacing} + #{$keypad_content_width});
+$height_for_equals_button: calc(
+  #{$standard_button_content_height} +
+  #{$button_border_size} +
+  #{$v_spacing} +
+  #{$button_border_size} +
+  #{$standard_button_content_height}
+);
+$width_for_button_zero: calc(
+  #{$standard_button_content_width} +
+  #{$button_border_size} +
+  #{$h_spacing} +
+  #{$button_border_size} +
+  #{$standard_button_content_width}
+);
+
+$fixed_width_font: "Courier";
+
+$button_border_colour: black;
+$button_background_colour: #ededed;
+$button_background_flash_colour: lime;
+$button_text_colour: black;
+
+.calculator,
+.calculator *
+{
+  padding: 0;
+  border: 0;
+  margin: 0;
+}
+
+.calculator__calculator
+{
+  width: $keypad_true_width;
+  padding: 0.5rem;
+  border: solid thin;
+  margin: 1.33rem auto;
+}
+
+.calculator__loading-msg
+{
+  font-size: 5rem;
+  font-style: italic;
+  text-align: center;
+}
+
+// start: display of load-time message
+.calculator__loading-msg
+{
+  display: none;
+}
+.calculator--loading .calculator__loading-msg
+{
+  display: block;
+}
+.calculator--loading .calculator__loading-msg ~ *
+{
+  display: none;
+}
+// end: display of load-time message
+
+.calculator__display
+{
+  font-family: $fixed_width_font, monospace;
+  margin: 0.5rem $h_spacing;
+  border: solid thin;
+  padding: 0.5rem;
+  text-align: right;
+  overflow: hidden;
+}
+.calculator__display::after   /* Clearfix */
+{
+  content: ' ';
+  display: block;
+  clear: both;
+}
+
+.calculator__line1
+{
+  float: right;
+  clear: right;
+  font-size: 1.5rem;
+  line-height: 1.5;
+}
+.calculator__line1:empty::before
+{
+  content: '1';
+  visibility: hidden;
+}
+
+.calculator__line2
+{
+  float: right;
+  clear: right;
+  opacity: 0.5;
+  font-size: 0.75rem;
+}
+.calculator__line2:empty::before
+{
+  content: '1';
+  visibility: hidden;
+}
+
+.calculator__keypad
+{
+  font-family: $fixed_width_font, monospace;
+  border-left-style: solid;
+  border-left-width: $h_spacing;
+  border-left-color: transparent;
+  padding-top: $v_spacing;
+  width: $keypad_content_width;
+}
+
+.calculator__keypad::after   /* Clearfix */
+{
+  content: " ";
+  display: block;
+  clear: both;
+}
+
+.calculator__button
+{
+  box-sizing: content-box;
+  width: $standard_button_content_width;
+  height: $standard_button_content_height;
+  border: solid $button_border_colour $button_border_size;
+  margin-right: $h_spacing;
+  margin-bottom: $v_spacing;
+  float: left;
+  font-size: $button_font_size;
+  background-color: $button_background_colour;
+  color: $button_text_colour;
+}
+
+.calculator__button--just-clicked
+{
+  background-color: $button_background_flash_colour;
+}
+
+.calculator__button--equals
+{
+  float: right;
+  height: $height_for_equals_button;
+}
+
+// start of: make minus sign bigger
+.calculator__button--minus
+{
+  color: transparent;
+  font-size: 0.001rem;
+}
+.calculator__button--minus::after
+{
+  content: '—';   // U+2014 (em dash)
+  color: $button_text_colour;
+  font-size: $button_font_size;
+}
+/*
+  "transform: scale(3, 1)" would also work, but would require the addition
+  of a div.
+*/
+// end of: make minus sign bigger
+
+.calculator__button--zero
+{
+  width: $width_for_button_zero;
+}
+
+.calculator__button--period
+{
+  font-weight: 900;
+}

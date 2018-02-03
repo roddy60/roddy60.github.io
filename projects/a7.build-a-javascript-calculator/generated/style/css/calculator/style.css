@@ -1,0 +1,112 @@
+@charset "UTF-8";
+.calculator,
+.calculator * {
+  padding: 0;
+  border: 0;
+  margin: 0; }
+
+.calculator__calculator {
+  width: calc(0.7rem + calc( 4 * (calc( 2px + 3.1rem + 2px ) + 0.7rem) ));
+  padding: 0.5rem;
+  border: solid thin;
+  margin: 1.33rem auto; }
+
+.calculator__loading-msg {
+  font-size: 5rem;
+  font-style: italic;
+  text-align: center; }
+
+.calculator__loading-msg {
+  display: none; }
+
+.calculator--loading .calculator__loading-msg {
+  display: block; }
+
+.calculator--loading .calculator__loading-msg ~ * {
+  display: none; }
+
+.calculator__display {
+  font-family: "Courier", monospace;
+  margin: 0.5rem 0.7rem;
+  border: solid thin;
+  padding: 0.5rem;
+  text-align: right;
+  overflow: hidden; }
+
+.calculator__display::after {
+  content: ' ';
+  display: block;
+  clear: both; }
+
+.calculator__line1 {
+  float: right;
+  clear: right;
+  font-size: 1.5rem;
+  line-height: 1.5; }
+
+.calculator__line1:empty::before {
+  content: '1';
+  visibility: hidden; }
+
+.calculator__line2 {
+  float: right;
+  clear: right;
+  opacity: 0.5;
+  font-size: 0.75rem; }
+
+.calculator__line2:empty::before {
+  content: '1';
+  visibility: hidden; }
+
+.calculator__keypad {
+  font-family: "Courier", monospace;
+  border-left-style: solid;
+  border-left-width: 0.7rem;
+  border-left-color: transparent;
+  padding-top: 0.7rem;
+  width: calc( 4 * (calc( 2px + 3.1rem + 2px ) + 0.7rem) ); }
+
+.calculator__keypad::after {
+  content: " ";
+  display: block;
+  clear: both; }
+
+.calculator__button {
+  box-sizing: content-box;
+  width: 3.1rem;
+  height: 2rem;
+  border: solid black 2px;
+  margin-right: 0.7rem;
+  margin-bottom: 0.7rem;
+  float: left;
+  font-size: 1rem;
+  background-color: #ededed;
+  color: black; }
+
+.calculator__button--just-clicked {
+  background-color: lime; }
+
+.calculator__button--equals {
+  float: right;
+  height: calc( 2rem + 2px + 0.7rem + 2px + 2rem ); }
+
+.calculator__button--minus {
+  color: transparent;
+  font-size: 0.001rem; }
+
+.calculator__button--minus::after {
+  content: '—';
+  color: black;
+  font-size: 1rem; }
+
+/*
+  "transform: scale(3, 1)" would also work, but would require the addition
+  of a div.
+*/
+.calculator__button--zero {
+  width: calc( 3.1rem + 2px + 0.7rem + 2px + 3.1rem ); }
+
+.calculator__button--period {
+  font-weight: 900; }
+
+/*# sourceMappingURL=style.css.map */
