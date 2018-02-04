@@ -6,11 +6,14 @@ The specification for this project is here:
 
 SASS TO CSS
 
-During development, the following command should be running:
+If you are working on the Sass files, you will need to have the following
+command running to see the effect of your changes:
 
   sass --watch style/scss:generated/style/css
 
 It compiles Sass files to CSS.
+
+During initial development, the version of Sass used was 3.4.25.
 
 UNIT TESTS
 
