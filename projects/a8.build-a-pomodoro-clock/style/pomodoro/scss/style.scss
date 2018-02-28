@@ -1,0 +1,204 @@
+$pomodoro_background_colour: white;
+
+.pomodoro
+{
+  margin-top: 1rem;
+  background-color: $pomodoro_background_colour;
+}
+
+.pomodoro__loading-msg
+{
+  font-size: 5rem;
+  font-style: italic;
+  text-align: center;
+}
+
+// start: display of load-time message
+.pomodoro__loading-msg
+{
+  display: none;
+}
+.pomodoro--loading .pomodoro__loading-msg
+{
+  display: block;
+}
+.pomodoro--loading .pomodoro__loading-msg ~ *
+{
+  display: none;
+}
+// end: display of load-time message
+
+.pomodoro__lengths
+{
+  display: table;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+.pomodoro__lengths > div
+{
+  display: table-row;
+}
+.pomodoro__lengths > div > div
+{
+  display: table-cell;
+}
+
+.pomodoro__lengths > div:last-child > div
+{
+  padding-bottom: 2rem;
+  /*<
+    We need at least a little padding here.  Without it, we find that, in
+    Chromium 57, a small part of ".pomodoro__triangle" overlaps the buttons
+    above it.  This is most likely a bug in that browser.
+  */
+}
+
+$distance_between_length_cols: 4rem;
+$side_padding: $distance_between_length_cols / 2;
+.pomodoro__lengths > div > div:not(:last-child)
+{
+  padding-right: $side_padding;
+}
+.pomodoro__lengths > div > div:not(:first-child)
+{
+  padding-left: $side_padding;
+}
+
+.pomodoro__lengths-header
+{
+  font-weight: bold;
+}
+
+.pomodoro__lengths-header > div
+{
+  vertical-align: bottom;
+}
+
+.pomodoro__length
+{
+  font-size: 3rem;
+  padding-bottom: 0.5rem;
+}
+
+.pomodoro__length-change-buttons > div:not(:first-child)
+{
+  padding-top: 1ex;
+}
+
+.pomodoro__length-change-buttons > div button:first-child
+{
+  margin-right: 0.75ex;
+}
+.pomodoro__length-change-buttons > div button:last-child
+{
+  margin-left: 0.75ex;
+}
+.pomodoro__length-change-buttons button
+{
+  padding: 0.5ex 0.75ex;
+}
+
+.pomodoro__display-and-control
+{
+  display: table;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+.pomodoro__display-and-control > div
+{
+  display: table-row;
+}
+.pomodoro__display-and-control > div > div
+{
+  display: table-cell;
+  vertical-align: middle;
+}
+
+$triangle_height: 11rem;
+
+.pomodoro__triangle-container
+{
+  position: relative;
+  height: $triangle_height;
+  display: inline-block;
+}
+
+.pomodoro__triangle-time-elapsed-indicator
+{
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+.pomodoro__triangle
+{
+  $sqrt_3: 1.73205080756887729352744634150587236694280525381038;
+  position: relative;
+  z-index: 1;
+  width: 0;
+  border-left:
+    solid $pomodoro_background_colour ($triangle_height / $sqrt_3);
+  border-right:
+    solid $pomodoro_background_colour ($triangle_height / $sqrt_3);
+  border-bottom: solid transparent $triangle_height;
+}
+
+.pomodoro__triangle-container.pomodoro__triangle-container--initial
+{
+  background-color: darkgrey;
+}
+
+.pomodoro__triangle-container.pomodoro__triangle-container--pomodoro
+{
+  background-color: cyan;
+}
+.pomodoro__triangle-container--pomodoro
+  .pomodoro__triangle-time-elapsed-indicator
+{
+  background-color: darken(cyan, 20%);
+}
+
+.pomodoro__triangle-container.pomodoro__triangle-container--break
+{
+  background-color: yellow;
+}
+.pomodoro__triangle-container--break
+  .pomodoro__triangle-time-elapsed-indicator
+{
+  background-color: darken(yellow, 20%);
+}
+
+.pomodoro__status-as-text
+{
+  display: table;
+}
+.pomodoro__status-as-text > div
+{
+  display: table-row;
+}
+.pomodoro__status-as-text > div > div
+{
+  display: table-cell;
+  padding-left: 3ex;
+  padding-right: 3ex;
+  height: ($triangle_height / 3);
+  vertical-align: middle;
+}
+
+$longest_mode_string: 'POMODORO';
+$max_width_for_char: 2.5ex;
+.pomodoro__mode
+{
+  min-width: (str-length($longest_mode_string) * $max_width_for_char);
+}
+/*<
+  Without this rule, the triangle "jumps" horizontally when the text in
+  ".pomodoro_mode" changes.
+*/
+
+.pomodoro__clock-control-buttons > div
+{
+  padding-top: 1.75rem;
+}

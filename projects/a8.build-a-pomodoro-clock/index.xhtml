@@ -1,0 +1,179 @@
+<?xml version="1.0"?>
+<!--
+  The source code for this project is here:
+
+    https://github.com/roddy60/roddy60.github.io/tree/master/projects/a8.build-a-pomodoro-clock
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "about:legacy-compat" [
+  <!ENTITY block_name "pomodoro">
+]>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Pomodoro</title>
+
+    <script type="text/javascript">
+      <![CDATA[
+      if (this.console && console.time) {
+        console.time('loading');
+      }
+      ]]>
+    </script>
+
+    <link
+      rel="stylesheet"
+      class="no-cache-bust"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@7.0.0/normalize.css"
+    />
+    <link rel="stylesheet" href="generated/style/pomodoro/css/style.css"/>
+  </head>
+
+  <body>
+    <div
+      class="
+        &block_name;
+        &block_name;--loading
+      "
+    >
+      <div class="&block_name;__loading-msg">
+        LOADING…
+      </div>
+
+      <div class="&block_name;__pomodoro">
+        <div class="&block_name;__lengths">
+          <div class="&block_name;__lengths-header">
+            <div>POMODORO<br/>LENGTH</div>
+            <div>BREAK<br/>LENGTH</div>
+            <div>POST-<br/>RESET<br/>LENGTH</div>
+          </div>
+          <div>
+            <div>
+              <div
+                class="
+                  &block_name;__length
+                  &block_name;__pomodoro-length
+                "
+              />
+              <div
+                class="
+                  &block_name;__length-change-buttons
+                  &block_name;__length-change-buttons--pomodoro-length
+                "
+              >
+                <div>
+                  <button>-1</button> <button>+1</button>
+                </div>
+                <div>
+                  <button>-5</button> <button>+5</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="
+                  &block_name;__length
+                  &block_name;__break-length
+                "
+              />
+              <div
+                class="
+                  &block_name;__length-change-buttons
+                  &block_name;__length-change-buttons--break-length
+                "
+              >
+                <div>
+                  <button>-1</button> <button>+1</button>
+                </div>
+                <div>
+                  <button>-5</button> <button>+5</button>
+                </div>
+              </div>
+            </div>
+            <div>
+              <div
+                class="
+                  &block_name;__length
+                  &block_name;__length-after-reset
+                "
+              />
+              <div class="&block_name;__length-change-buttons">
+                <div
+                  class="
+                    &block_name;__length-change-buttons
+                    &block_name;__length-change-buttons--length-after-reset
+                  "
+                >
+                  <div>
+                    <button>-1</button> <button>+1</button>
+                  </div>
+                  <div>
+                    <button>-5</button> <button>+5</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="&block_name;__display-and-control">
+          <div>
+            <div>
+              <div
+                class="
+                  &block_name;__triangle-container
+                  &block_name;__triangle-container--initial
+                "
+              >
+                <div class="&block_name;__triangle"/>
+                <div class="&block_name;__triangle-time-elapsed-indicator"/>
+              </div>
+            </div>
+            <div>
+              <div class="&block_name;__status-as-text">
+                <div>
+                  <div class="&block_name;__mode">—</div>
+                </div>
+                <div>
+                  <div class="&block_name;__time-remaining">—</div>
+                </div>
+                <div>
+                  <div class="&block_name;__time-elapsed">—</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="&block_name;__clock-control-buttons">
+            <div>
+              <button class="&block_name;__toggle-button">
+                START/PAUSE/RESUME
+              </button>
+            </div>
+            <div>
+              <button class="&block_name;__reset-button">RESET</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="no-cache-bust">
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/js-polyfills@0.1.41/polyfill.min.js"
+      ></script>
+    </div>
+
+    <script type="text/javascript" src="js/config/requirejs.js"/>
+    <div class="no-cache-bust">
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/requirejs@2.3.5/require.js"
+      />
+    </div>
+    <script type="text/javascript" src="js/start.js"/>
+  </body>
+</html>
