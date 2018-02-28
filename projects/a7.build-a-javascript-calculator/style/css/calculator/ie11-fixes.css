@@ -3,6 +3,6 @@
   width: 271px;
   /*<
     The 'calc' expression doesn't work in IE11, so we override it
-    with a 
+    with something that IE11 understands.
   */
 }
