@@ -2,6 +2,18 @@ define(
   [],
   function () {
     return {
+      /** @return <Array> */
+      interleave: function (array1, array2) {
+        var result = [];
+        for (var i = 0; i < array1.length && i < array2.length + 1; i++) {
+          result.push(array1[i]);
+          if (i < array2.length) {
+            result.push(array2[i]);
+          }
+        }
+        return result;
+      },
+
       /** @return Array<string> - may contain duplicates */
       jquery_ajax_error_messages: function () {
         /*
