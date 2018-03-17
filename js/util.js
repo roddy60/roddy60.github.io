@@ -33,6 +33,25 @@ define(
       },
 
       /**
+        * @param {Element|NodeList|null} x
+        * @return {Element|NodeList} - the return value is x
+        * @throws {Error}
+        */
+      nonempty: function (x) {
+        var x_is_good =
+          x instanceof Element || x instanceof NodeList && x.length;
+
+        if (!x_is_good) {
+          var msg = 'Failed to find expected element or elements';
+          dev.console.error(msg);
+          dev.console.trace();
+          throw new Error(msg);
+        }
+
+        return x
+      },
+
+      /**
         * @param {Object} object
         * @return Array<string>
         */
