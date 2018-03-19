@@ -40,6 +40,27 @@
       rel="stylesheet"
       href="generated/style/tic-tac-toe/css/style.css"
     />
+
+    <style type="text/css">
+      <!--
+        This 'style' element should be unnecessary, because the rules are in
+        style.css and the 'link' element is supposed to be "render
+        blocking".  However, a FOUC was once observed in Firefox ESR 52
+        (though it proved impossible to replicate, even with a fresh firefox
+        profile), so we are playing it safe and including these rules in the
+        HTML document.
+      -->
+      <![CDATA[
+      .tic-tac-toe > *
+      {
+        display: none;
+      }
+      .tic-tac-toe.tic-tac-toe--loading > .tic-tac-toe__loading
+      {
+        display: block;
+      }
+      ]]>
+    </style>
   </head>
   <body>
     <div class="no-cache-bust">
