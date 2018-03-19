@@ -60,12 +60,11 @@ $board_line_width: 0.8ex;
   border-right: solid black $board_line_width;
 }
 
-$square_side_len: 2.333ex;
+$square_side_len: 2.833ex;
 
 .tic-tac-toe__square
 {
   font-size: 2rem;
-  padding: 0.5ex;
   width: $square_side_len;
   height: $square_side_len;
   vertical-align: middle;

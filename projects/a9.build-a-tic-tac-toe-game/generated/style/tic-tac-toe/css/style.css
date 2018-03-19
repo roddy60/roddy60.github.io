@@ -45,14 +45,13 @@
 
 .tic-tac-toe__square {
   font-size: 2rem;
-  padding: 0.5ex;
-  width: 2.333ex;
-  height: 2.333ex;
+  width: 2.833ex;
+  height: 2.833ex;
   vertical-align: middle; }
 
 .tic-tac-toe__inner-square {
-  width: 2.333ex;
-  height: 2.333ex; }
+  width: 2.833ex;
+  height: 2.833ex; }
 
 .tic-tac-toe__status-message {
   font-size: 2.5rem; }
