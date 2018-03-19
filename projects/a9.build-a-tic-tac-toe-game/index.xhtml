@@ -1,0 +1,175 @@
+<?xml version="1.0"?>
+<!--
+  The source code for this project is here:
+
+    https://github.com/roddy60/roddy60.github.io/tree/master/projects/a9.build-a-tic-tac-toe-game
+
+-->
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+  "about:legacy-compat" [
+  <!ENTITY block_name "tic-tac-toe">
+]>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Tic Tac Toe</title>
+
+    <script type="text/javascript">
+      <![CDATA[
+      if (this.console && console.time) {
+        console.time('loading');
+      }
+      ]]>
+    </script>
+
+    <link
+      rel="stylesheet"
+      class="no-cache-bust"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@7.0.0/normalize.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      class="no-cache-bust"
+      href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="stylesheet" href="generated/style/tic-tac-toe/css/style.css"/>
+  </head>
+  <body>
+    <div class="no-cache-bust">
+      <script
+        type="text/javascript"
+        defer="defer"
+        src="https://cdn.jsdelivr.net/npm/js-polyfills@0.1.41/es6.js"
+      />
+    </div>
+    <script
+      type="text/javascript"
+      defer="defer"
+      src="js/config/requirejs.js"
+    />
+    <div class="no-cache-bust">
+      <script
+        type="text/javascript"
+        defer="defer"
+        src="https://cdn.jsdelivr.net/npm/requirejs@2.3.5/require.min.js"
+      />
+    </div>
+    <script
+      type="text/javascript"
+      defer="defer"
+      src="js/start.js"
+    />
+
+    <div class="&block_name; &block_name;--loading">
+      <div class="&block_name;__loading">
+        LOADING…
+      </div>
+
+      <div class="&block_name;__choose-player">
+        <h1>TIC TAC TOE</h1>
+
+        <h2>
+          YOU<br/>
+          VERSUS<br/>
+          THE COMPUTER
+        </h2>
+
+        <button class="&block_name;__play-as-x">
+          PLAY AS X
+        </button>
+
+        <button class="&block_name;__play-as-o">
+          PLAY AS O
+        </button>
+
+        <p>
+          <i>(X moves first)</i>
+        </p>
+      </div>
+
+      <div class="&block_name;__play">
+        <div class="&block_name;__board">
+          <div class="&block_name;__board-row">
+            <div class="&block_name;__square">
+              <div class="&block_name;__inner-square">
+                <span/>
+              </div>
+            </div>
+            <div class="&block_name;__square">
+              <div class="&block_name;__inner-square">
+                <span/>
+              </div>
+            </div>
+            <div class="&block_name;__square">
+              <div class="&block_name;__inner-square">
+                <span/>
+              </div>
+            </div>
+          </div>
+
+          <div class="&block_name;__board-row">
+            <div class="&block_name;__square">
+              <div class="&block_name;__inner-square">
+                <span/>
+              </div>
+            </div>
+            <div class="&block_name;__square">
+              <div class="&block_name;__inner-square">
+                <span/>
+              </div>
+            </div>
+            <div class="&block_name;__square">
+              <div class="&block_name;__inner-square">
+                <span/>
+              </div>
+            </div>
+          </div>
+
+          <div class="&block_name;__board-row">
+            <div class="&block_name;__square">
+              <div class="&block_name;__inner-square">
+                <span/>
+              </div>
+            </div>
+            <div class="&block_name;__square">
+              <div class="&block_name;__inner-square">
+                <span/>
+              </div>
+            </div>
+            <div class="&block_name;__square">
+              <div class="&block_name;__inner-square">
+                <span/>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <p class="&block_name;__status-message"/>
+
+        <div class="&block_name;__checkbox-container">
+          <div>
+            <input
+              type="checkbox"
+              class="&block_name;__automatically-start-new-game"
+            />
+          </div>
+          <div>
+            As soon as game ends,<br/>
+            automatically start new<br/>
+            game.
+          </div>
+        </div>
+
+        <div class="&block_name;__new-game-button-container">
+          <button
+            class="&block_name;__new-game-button"
+          >NEW GAME</button>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

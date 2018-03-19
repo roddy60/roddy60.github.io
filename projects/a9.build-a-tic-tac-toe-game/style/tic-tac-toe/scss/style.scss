@@ -1,0 +1,119 @@
+.tic-tac-toe
+{
+  margin: 1rem;
+  text-align: center;
+}
+
+.tic-tac-toe > *
+{
+  display: none;
+}
+@each $screen in loading, choose-player, play {
+  .tic-tac-toe.tic-tac-toe--#{$screen} > .tic-tac-toe__#{$screen}
+  {
+    display: block;
+  }
+}
+
+.tic-tac-toe__loading
+{
+  font-size: 5rem;
+  font-style: italic;
+}
+
+.tic-tac-toe__play-as-o
+{
+  margin-left: 3ex;
+}
+
+.tic-tac-toe__board
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tic-tac-toe__board
+{
+  display: table;
+}
+.tic-tac-toe__board-row
+{
+  display: table-row;
+}
+.tic-tac-toe__square
+{
+  display: table-cell;
+}
+
+.tic-tac-toe__board
+{
+  border-collapse: collapse;
+}
+
+$board_line_width: 0.8ex;
+.tic-tac-toe__board-row:not(:last-child) .tic-tac-toe__square
+{
+  border-bottom: solid black $board_line_width;
+}
+.tic-tac-toe__square:not(:last-child)
+{
+  border-right: solid black $board_line_width;
+}
+
+$square_side_len: 2.333ex;
+
+.tic-tac-toe__square
+{
+  font-size: 2rem;
+  padding: 0.5ex;
+  width: $square_side_len;
+  height: $square_side_len;
+  vertical-align: middle;
+}
+
+.tic-tac-toe__inner-square
+{
+  width: $square_side_len;
+  height: $square_side_len;
+}
+
+.tic-tac-toe__status-message
+{
+  font-size: 2.5rem;
+}
+
+.tic-tac-toe__status-message:empty::before
+{
+  content: 'FILLER';
+  visibility: hidden;
+}
+
+.tic-tac-toe__checkbox-container
+{
+  margin: 0.8333em auto;
+}
+
+.tic-tac-toe__checkbox-container
+{
+  display: table;
+}
+.tic-tac-toe__checkbox-container > *
+{
+  display: table-cell;
+}
+
+.tic-tac-toe__checkbox-container > *:first-child
+{
+  vertical-align: middle;
+}
+
+.tic-tac-toe__checkbox-container > *:last-child
+{
+  text-align: left;
+  padding-left: 2ex;
+}
+
+.tic-tac-toe__new-game-button-container
+{
+  margin-top: 2em;
+}
