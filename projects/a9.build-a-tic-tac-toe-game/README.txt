@@ -1,7 +1,13 @@
 BEST PLAY
 
-As noted in js/Engine.js, this software makes no effort to find
-the best move.
+This application makes no effort to find the best move, since that behaviour
+is not required by the specification.
+
+BETTER GAMEPLAY
+
+For better gameplay, uncheck the checkbox labelled "... automatically start
+new game".  (It's checked initially because that's required, on my reading
+of the specification.)
 
 UNIT TESTS
 
