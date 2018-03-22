@@ -23,12 +23,12 @@ define(
       }
     );
 
-      /**
-        * "ne" is short for "non-empty".
-        * @param {jQuery} jq
-        * @return {jQuery} - same as the 'jq' parameter
-        * @throws {Error}
-        */
+    /**
+      * "ne" is short for "non-empty".
+      * @param {jQuery} jq
+      * @return {jQuery} - same as the 'jq' parameter
+      * @throws {Error}
+      */
     function ne(jq) {
       if (jq.length >= 1) {
         return jq;
