@@ -37,7 +37,7 @@ define(
       this._DOM.setLengthChangeAction($.proxy(this, '_handleLengthChange'));
       this._DOM.setToggleAction($.proxy(this, '_handleToggle'));
       this._DOM.setResetAction($.proxy(this, '_handleReset'));
-      this._updateDisplay(true);
+      this._updateDisplay();
       this._DOM.reveal();
       dev.console.timeEnd('loading');
     };
