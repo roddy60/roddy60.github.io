@@ -55,8 +55,8 @@ define(
 
         if (!x_is_good) {
           var msg = 'Failed to find expected element or elements';
-          dev.console.error(msg);
-          dev.console.trace();
+          console.error(msg);
+          console.trace();
           throw new Error(msg);
         }
 
