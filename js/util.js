@@ -51,7 +51,20 @@ define(
         */
       nonempty: function (x) {
         var x_is_good =
-          x instanceof Element || x instanceof NodeList && x.length;
+          x instanceof Element ||
+          (typeof x === 'object' &&
+          typeof x.length === 'number' &&
+          x.length >= 1);
+          /*
+            When x is not an instance of Element, there are probably too
+            many possible classes to check.  For example, querySelectorAll
+            returns NodeList and getElementsByTagName returns
+            HTMLCollection.
+
+            Useful reference for 'typeof':
+
+              https://www.ecma-international.org/ecma-262/8.0/index.html#sec-typeof-operator
+          */
 
         if (!x_is_good) {
           var msg = 'Failed to find expected element or elements';
