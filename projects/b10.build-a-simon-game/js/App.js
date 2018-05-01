@@ -26,6 +26,8 @@ define(
       */
 
       this._DOM.reveal();
+
+      console.timeEnd('loading');
     }
 
     Class.prototype.start = function () {
