@@ -155,7 +155,7 @@
   display: none;
 }
 
-.simon__checkbox + .simon__checkbox-visuals::before
+.simon__checkbox-visuals::before
 {
   content: '\2714'; /* "HEAVY CHECK MARK" */
   display: inline-block;
