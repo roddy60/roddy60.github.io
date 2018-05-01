@@ -1,0 +1,57 @@
+/*
+  This graph shows the state transitions in the function
+  'get_state_transition_info' in the file Simon.js.
+
+  The text should really be in a fixed-width font.  I tried to set
+  "fontname=Courier" for the nodes, but wasn't able to find a better layout
+  than I have here.
+*/
+
+strict digraph transitions {
+  layout=neato
+  nodesep=8
+  overlap=false
+  splines=ortho
+  start=109
+
+  node [shape=box]
+
+  accepting_step -> awaiting_step [color=cyan]
+  accepting_step -> waiting_before_showing_steps [color=cyan]
+  accepting_step -> user_victorious [color=cyan]
+
+  awaiting_step -> accepting_step [color=BlueViolet]
+  awaiting_step -> rejecting_step [color=BlueViolet]
+  awaiting_step -> out_of_time [color=OliveDrab]
+
+  between_2_steps -> showing_step [color=DarkOrange]
+
+  initial
+
+  out_of_time -> showing_step [color=blue]
+
+  rejecting_step -> showing_step [color=blue]
+
+  showing_step -> between_2_steps [color=cyan]
+  showing_step -> awaiting_step [color=cyan]
+
+  user_victorious -> showing_step [color=chartreuse]
+
+  waiting_before_showing_steps -> showing_step [color=NavajoWhite]
+}
+
+/*
+  Colours:
+
+    audio_stop: cyan
+    audio_stop_and_css_transition_end: blue
+    colour_click: BlueViolet
+    css_transition_end: chartreuse
+    end_of_between_2_steps: DarkOrange
+    end_of_waiting_before_showing_steps: NavajoWhite
+    out_of_time: OliveDrab
+
+  For the meanings of these colour names, see:
+
+    https://en.wikipedia.org/wiki/X11_color_names
+*/

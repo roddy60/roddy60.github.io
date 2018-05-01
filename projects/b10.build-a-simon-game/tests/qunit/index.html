@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <script type="text/javascript">
+      // <![CDATA[
+      if (this.console && console.time) {
+        console.time('QUnit test suite');
+      }
+      // ]]>
+    </script>
+
+    <title>Tests: freeCodeCamp: "Build a Simon Game"</title>
+
+    <link
+      rel="stylesheet"
+      class="no-cache-bust"
+      href="https://cdn.jsdelivr.net/npm/qunit@2.5.0/qunit/qunit.min.css"
+    />
+  </head>
+
+  <body>
+    <div id="qunit"></div>
+    <div id="qunit-fixture"></div>
+
+    <div class="no-cache-bust">
+      <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/js-polyfills@0.1.41/es6.js"
+      ></script>
+    </div>
+    <script
+      type="text/javascript"
+      src="../../js/config/requirejs.js"
+    ></script>
+    <script type="text/javascript">
+      // <![CDATA[
+      require.baseUrl =
+        document.location.pathname.replace(/[^/]+$/, '') + '../../js';
+      if (!require.paths) {
+        require.paths = {};
+      }
+      require.paths['vendor/Blister'] =
+        'https://cdn.jsdelivr.net/npm/blister@1.1.0/dist/blister.min';
+      require.paths['vendor/QUnit'] =
+        'https://cdn.jsdelivr.net/npm/qunit@2.5.0/qunit/qunit.min';
+      require.paths['vendor/lolex'] =
+        'https://cdn.jsdelivr.net/npm/lolex@2.3.2/lolex.min';
+      require.paths.test = '../tests/qunit/js';
+      // ]]>
+    </script>
+    <div class="no-cache-bust">
+      <script
+        type="text/javascript"
+        defer="defer"
+        src="https://cdn.jsdelivr.net/npm/requirejs@2.3.5/require.min.js"
+      ></script>
+    </div>
+
+    <script type="text/javascript" defer="defer" src="js/start.js"></script>
+  </body>
+</html>

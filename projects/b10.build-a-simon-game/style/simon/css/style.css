@@ -1,0 +1,183 @@
+.simon
+{
+  margin: 1rem;
+  text-align: center;
+  font-family:
+    'Calibri',
+    'Gill Sans',
+    'DejaVu Sans Condensed',
+    'Liberation Sans',
+    'Nimbus Sans L',
+    Tahoma,
+    Geneva,
+    'Helvetica Neue',
+    Helvetica,
+    Arial,
+    sans-serif;
+}
+
+.simon > *
+{
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.simon__colour-square-container
+{
+  width: 10rem;
+  height: 10rem;
+}
+
+.simon__colour-square
+{
+  width: 5rem;
+  height: 5rem;
+  float: left;
+}
+
+.simon__colour-square--red
+{
+  background-color: #9f0f17;
+}
+.simon__colour-square--red.simon__colour-square--highlight
+{
+  background-color: #ff4b4b;
+}
+
+.simon__colour-square--green
+{
+  background-color: #00a74a;
+}
+.simon__colour-square--green.simon__colour-square--highlight
+{
+  background-color: #0aff7d;
+}
+
+.simon__colour-square--blue
+{
+  background-color: #094a8f;
+}
+.simon__colour-square--blue.simon__colour-square--highlight
+{
+  background-color: #158dff;
+}
+
+.simon__colour-square--yellow
+{
+  background-color: #cca707;
+}
+.simon__colour-square--yellow.simon__colour-square--highlight
+{
+  background-color: #feda3d;
+}
+
+.simon__steps-container
+{
+  margin-top: 2em;
+  /*>
+    We use a fixed-width font so that there are no lateral jumps (due to
+    changes in width) when the text in ".simon__steps" changes.
+  */
+  font-family:
+    Consolas,
+    'Andale Mono',
+    'Lucida Console',
+    'DejaVu Sans Mono',
+    'Liberation Mono',
+    'Nimbus Mono L',
+    Monaco,
+    'Courier New',
+    Courier,
+    monospace;
+}
+
+.simon__steps-label
+{
+  font-weight: bold;
+}
+
+/*>
+  The following CSS for messages nicely handles messages that are multiline,
+  something which may occur on a narrow handheld device.
+*/
+
+.simon__message-container
+{
+  position: relative;
+  height: 3.333em;
+  font-weight: bold;
+}
+
+/*>
+  To centre vertically and horizontally, we are using a technique described
+  at <https://www.w3.org/Style/Examples/007/center.en.html#hv3> (page
+  retrieved 2018-04-27).
+*/
+.simon__error-message, .simon__victory-message
+{
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+.simon__error-message
+{
+  color: red;
+}
+
+.simon__error-message:not(:empty)
+{
+  color: orange;
+  transition-property: color;
+}
+
+.simon__victory-message
+{
+  color: lime;
+}
+
+.simon__victory-message:not(:empty)
+{
+  color: black;
+  transition-property: color;
+}
+
+.simon__checkbox-container
+{
+  word-spacing: 1.5ex;
+}
+
+.simon__checkbox
+{
+  display: none;
+}
+
+.simon__checkbox + .simon__checkbox-visuals::before
+{
+  content: '\2714'; /* "HEAVY CHECK MARK" */
+  display: inline-block;
+  width: 1.1em;
+  height: 1.1em;
+  background-color: white;
+  color: white;
+  border: solid grey 1px;
+  text-align: center;
+  cursor: default;
+}
+.simon__checkbox:checked + .simon__checkbox-visuals::before
+{
+  color: black;
+}
+
+/*>
+  The text of the button changes.  We make the button wide enough for the
+  widest message that it may contain, so that the button doesn't resize when
+  its text changes, because that would be visually jarring.
+*/
+.simon__button
+{
+  width: 9em;
+}

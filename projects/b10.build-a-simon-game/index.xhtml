@@ -1,0 +1,167 @@
+<?xml version="1.0"?>
+<!--
+  The source code for this project is here:
+
+    https://github.com/roddy60/roddy60.github.io/tree/master/projects/b10.build-a-simon-game
+-->
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Style-Type" content="text/css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+
+    <title>Simon</title>
+
+    <script type="text/javascript">
+      <![CDATA[
+      if (this.console && console.time) {
+        console.time('loading');
+      }
+      ]]>
+    </script>
+
+    <link
+      rel="stylesheet"
+      class="no-cache-bust"
+      href="https://cdn.jsdelivr.net/npm/normalize.css@7.0.0/normalize.min.css"
+    />
+
+    <link
+      rel="stylesheet"
+      href="style/simon/css/style.css"
+    />
+
+    <style type="text/css">
+      <![CDATA[
+      .simon__loading
+      {
+        display: none;
+      }
+
+      .simon.simon--loading > .simon__loading
+      {
+        display: block;
+        font-size: 5rem;
+        font-style: italic;
+        text-align: center;
+      }
+      .simon.simon--loading > *
+      {
+        display: none;
+      }
+      ]]>
+    </style>
+  </head>
+  <body>
+    <script
+      type="text/javascript"
+      defer="defer"
+      src="js/config/requirejs.js"
+    />
+    <div class="no-cache-bust">
+      <script
+        type="text/javascript"
+        defer="defer"
+        src="https://cdn.jsdelivr.net/npm/requirejs@2.3.5/require.min.js"
+      />
+    </div>
+    <script
+      type="text/javascript"
+      defer="defer"
+      src="js/start.js"
+    />
+
+    <div class="simon simon--loading">
+      <div class="simon__loading">
+        LOAD&#x00AD;ING…
+      </div>
+
+      <h1>SIMON</h1>
+
+      <div class="simon__colour-square-container">
+        <div
+          class="
+            simon__colour-square
+            simon__colour-square--green
+          "
+        >
+          <audio
+            src="sounds/simonSound1.mp3"
+            preload="preload"
+          />
+        </div>
+        <div
+          class="
+            simon__colour-square
+            simon__colour-square--red
+          "
+        >
+          <audio
+            src="sounds/simonSound2.mp3"
+            preload="preload"
+          />
+        </div>
+
+        <div
+          class="
+            simon__colour-square
+            simon__colour-square--yellow
+          "
+        >
+          <audio
+            src="sounds/simonSound3.mp3"
+            preload="preload"
+          />
+        </div>
+
+        <div
+          class="
+            simon__colour-square
+            simon__colour-square--blue
+          "
+        >
+          <audio
+            src="sounds/simonSound4.mp3"
+            preload="preload"
+          />
+        </div>
+      </div> <!-- .simon__colour-square-container -->
+
+      <p class="simon__steps-container">
+        <span class="simon__steps-label">STEPS:</span>
+        <span class="simon__steps">&#x2014;</span>
+      </p>
+
+      <p class="simon__message-container">
+        <span class="simon__error-message"/>
+        <span class="simon__victory-message"/>
+      </p>
+
+      <p class="simon__checkbox-container">
+        <label>
+          <input
+            type="checkbox"
+            class="simon__checkbox"
+          />
+          <span class="simon__checkbox-visuals"/>
+        </label>
+        STRICT
+      </p>
+
+      <p>
+        <button class="simon__button">START</button>
+      </p>
+
+      <audio
+        class="simon__error-beep"
+        src="sounds/error-beep.mp3"
+        preload="preload"
+      />
+
+      <audio
+        class="simon__out-of-time-sound"
+        src="sounds/times-up.mp3"
+        preload="preload"
+      />
+    </div>
+  </body>
+</html>
